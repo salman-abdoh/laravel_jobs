@@ -15,7 +15,7 @@
     
     <main class="form-signin bg-dark text-light text-center  " style="direction: rtl;">
         <div class=" align-items-center flex-direction-center text-warning text-center">
-          <a href="index.html" class="text-warning text-center " style="text-decoration: none;"><h1 class="m-5"><i class="fas fa-briefcase"></i><br> توضيف</h1></div></a>   
+          <a href="{{url('/')}}" class="text-warning text-center " style="text-decoration: none;"><h1 class="m-5"><i class="fas fa-briefcase"></i><br> توضيف</h1></div></a>   
       <form>
        <h1>التسجيل</h1>
         

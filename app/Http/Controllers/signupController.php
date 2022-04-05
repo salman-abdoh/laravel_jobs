@@ -8,7 +8,7 @@ class SignupController extends Controller
 {
     //
     public function sinup(){
-        return view('web/sinup');
+        return view('web/signup');
     }
 }
 

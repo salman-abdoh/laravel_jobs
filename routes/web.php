@@ -33,9 +33,9 @@ Route::get('/job', [JobController::class,'job']);
 Route::get('/about',[AboutController::class,'about']);
 Route::get('/call',[CallController::class,'call']);
 Route::get('/cv',[CvController::class,'cv']);
-Route::get('/call',[ServicesController::class,'services']);
+Route::get('/services',[ServicesController::class,'services']);
 Route::get('/login', [LoginController::class,'login']);
-Route::get('/sinup',[SignupController::class,'sinup']);
+Route::get('/signup',[SignupController::class,'sinup']);
 
 
 
