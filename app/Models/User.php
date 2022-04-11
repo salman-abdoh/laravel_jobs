@@ -7,22 +7,26 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Laratrust\Traits\LaratrustUserTrait;
+
+
 
 class User extends Authenticatable
 {
+    use LaratrustUserTrait;
     use HasApiTokens, HasFactory, Notifiable;
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
+    
+   
     protected $fillable = [
         'name',
+        'phone',
         'email',
         'password',
     ];
-
+    public function skill()
+    {
+        return $this->hasMany(Skill::class,'user_id');
+    }
     /**
      * The attributes that should be hidden for serialization.
      *

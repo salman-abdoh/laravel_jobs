@@ -8,7 +8,7 @@ class CompanyController extends Controller
 {
     //
     public function company(){
-        return view('web/company');
+        return view('web.company');
     }
 }
 

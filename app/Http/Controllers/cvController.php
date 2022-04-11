@@ -8,7 +8,7 @@ class CvController extends Controller
 {
     //
     public function cv(){
-        return view('web/cv');
+        return view('web.cv');
     }
 }
 

@@ -15,38 +15,50 @@
     
     <main class="form-signin bg-dark text-light text-center  " style="direction: rtl;">
         <div class=" align-items-center flex-direction-center text-warning text-center">
-         <a href="{{url('/')}}" class="text-warning text-center " style="text-decoration: none;"><h1 class="m-5"><i class="fas fa-briefcase"></i><br> توضيف</h1></div></a>   
-      <form>
+         <a href="{{url('/')}}" class="text-warning text-center " style="text-decoration: none;"><h1 class="m-5">
+        
+         <i class="fas fa-briefcase"></i><br> توضيف</h1></div></a>   
+      <form action="/call" method="POST">
+      @csrf  
        <h1>تواصل معنا </h1>
         
-    
+      
+       
         <div class="form-floating  text-dark " style="direction: rtl;">
            
-            <input type="text" class="form-control " style="direction: rtl;" id="floatingInputfname" placeholder="name@example.com">
+            <input type="text" class="form-control " name="name" style="direction: rtl;" id="floatingInputfname" placeholder="name">
             <label for="floatingInputfname">الاسم  </label><br>
-           
+            </div>
             <div class="form-floating text-dark ">
-            <input type="number" class="form-control " id="floatingInputphone" placeholder="name@example.com">
+            <input type="number" class="form-control " name="phone" id="floatingInputphone" placeholder="777777777">
             <label for="floatingInputphone"> رقم الهاتف</label><br></div>
             <div class="form-floating text-dark ">
-          <input type="email" class="form-control " id="floatingInput" placeholder="name@example.com">
+          <input type="email" class="form-control " name="email" id="floatingInput" placeholder="name@example.com">
           <label for="floatingInput">البريد الالكتروني</label></div>
-        </div><br>
+       <br>
         <div class="form-floating text-dark ">
-          <textarea type="text"class="form-control " style="height: 200px;" id="floating masge" name="fname2"  placeholder="الرسالة"></textarea><br>
+        <input type="text" class="form-control " name="messege" id="floatingInput" placeholder="name@example.com">
+          <!-- <textarea type="text"class="form-control " style="height: 200px;" id="floating masge" name="fname2"  placeholder="الرسالة"></textarea><br> -->
           <label for="floatingPassword" style="direction: rtl;"> الرسالة</label>
         </div>
    
-        
-        <div class="checkbox mb-3">
-          <label>
-            <input type="checkbox" value="remember-me">  ذكر
-          </label>
-          <label>
-            <input type="checkbox" value="remember-me">  انثي
-          </label>
+        <div class="col-md-6">
+            <div class="form-password-toggle">
+              <label class="form-label" for="multicol-confirm-password">تفعيل العنوان</label>
+              <div class="input-group input-group-merge">
+                <label class="switch">
+                  <input name="status" value=1 type="checkbox" checked class="switch-input" />
+                  <span class="switch-toggle-slider">
+                    <span class="switch-on"></span>
+                    <span class="switch-off"></span>
+                  </span>
+                  <span class="switch-label">مفعل</span>
+                </label>
+              </div>
+            </div>
+          </div>
         </div>
-        
+      
         <button class="w-100 btn btn-lg btn-warning" type="submit">ارسال</button><br>
         
         <p class="btn btn-outline-light text-warning mt-4 w-100">او من خلال</p>

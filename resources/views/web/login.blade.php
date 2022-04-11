@@ -16,22 +16,30 @@
     <main class="form-signin bg-dark text-light text-center ">
         <div class=" align-items-center flex-direction-center text-warning text-center">
           <a href="{{url('/')}}" class="text-warning text-center " style="text-decoration: none;"><h1 class="m-5"><i class="fas fa-briefcase"></i><br> توضيف</h1></div></a>   
-      <form>
+          @if ($errors->any())
+          @foreach ($errors->all() as $err)
+          <p class="alert alert-danger">{{ $err }}</p>
+              
+          @endforeach
+              
+          @endif
+          <form id="login" name="login" action="{{ route('do_login') }}" method="POST" enctype="multipart/form-data">
+        @csrf
        <h1>الدخول</h1>
         
     
         <div class="form-floating text-dark ">
-          <input type="email" class="form-control " id="floatingInput" placeholder="name@example.com">
+          <input type="email" name="email" class="form-control " id="floatingInput" placeholder="name@example.com">
           <label for="floatingInput">البريد الالكتروني</label>
         </div><br>
         <div class="form-floating text-dark ">
-          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+          <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
           <label for="floatingPassword">كلمة السر</label>
         </div>
     
         <div class="checkbox mb-3">
           <label>
-            <input type="checkbox" value="remember-me"> Remember me
+            <input type="checkbox" name="remember" value="remember-me"> Remember me
           </label>
         </div>
         <button class="w-100 btn btn-lg btn-warning" type="submit">الدخول</button>

@@ -8,11 +8,11 @@ class SignupController extends Controller
 {
     //
     public function sinup(){
-        return view('web/signup');
+        return view('web.signup');
     }
 }
 
 
 
 
-?>
+?> 

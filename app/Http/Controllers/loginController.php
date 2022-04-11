@@ -8,7 +8,7 @@ class LoginController extends Controller
 {
     //
     public function login(){
-        return view('web/login');
+        return view('web.login');
     }
 }
 

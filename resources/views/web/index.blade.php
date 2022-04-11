@@ -134,7 +134,7 @@
                   <p class="card-text">هذه الوضية تتطلب خبرات كافي. </p>
                   <hr>
                   <div class="d-flex  align-items-center">
-             <a href="pages/detailsjob.html">
+             <a href="{{url('/detailsjob')}}" >
                     <button type="button" class="btn btn-sm btn-outline-warning"  data-bs-target="#carouselExampleCaptions">عرض التفاصيل </button>
                   </a>
                   </div>
@@ -314,7 +314,8 @@
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
         <div class="col-lg-2 d-flex" style="    flex-direction: column;
         align-items: center;">
-         <div class="border-radius" ><img src="./img/pngegg (3).png " height="100px" width="100px" alt="" style=" height: 100px;   border-radius: 50%">
+         <div class="border-radius" >
+           <img src="./img/pngegg (3).png " height="100px" width="100px" alt="" style=" height: 100px;   border-radius: 50%">
          </div>
           <h4 class="pt-2">جيت هب</h2>
          
